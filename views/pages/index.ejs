@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/_header.ejs") %>
+    <meta
+      name="description"
+      content="Book your stay at Eagles View Kungwini for a peaceful getaway. Enjoy comfortable rooms, an on-site bar, and easy access to the town center."
+    />
+    <title>
+      Eagles View Kungwini | Exclusive Guest Lodge in Kungwini, Bronkhorstspruit
+    </title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery.3.7.1.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/swiper.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <style>
+      /* Hero section starts here */
+
+      .hero {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("assets/images/hero-lg-screen.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        min-height: 100dvh;
+        padding: 100px 20px;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero-bg-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #00000085;
+      }
+
+      .hero-content {
+        z-index: 1;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-family: "Broadway";
+        text-shadow: 2px 2px 3px #00000086;
+        font-weight: 400;
+        font-style: normal;
+        color: #fff;
+        text-transform: capitalize;
+      }
+
+      .hero p {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: #fff;
+      }
+
+      /* Media query for changing hero background image for 880px screen */
+      @media (max-width: 880px) {
+        .hero {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-image: url("assets/images/hero-sm-screen-1.webp") !important;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+          min-height: 100dvh;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 1.8rem;
+          text-align: center;
+        }
+
+        .hero p {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .navbar-brand img {
+          height: 70px !important;
+          width: 70px !important;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .navbar {
+          background-color: transparent !important;
+          transition: background-color 0.3s ease;
+          color: #352d2d !important;
+          box-shadow: none !important;
+        }
+
+        .navbar .nav-link {
+          color: #fff !important;
+        }
+
+        .navbar.scrolled {
+          background-color: #ebe8d8 !important;
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .navbar-brand {
+          color: #fff !important;
+        }
+
+        .navbar.scrolled .navbar-brand img {
+          height: 90px !important;
+          width: 90px !important;
+        }
+
+        .navbar.scrolled .nav-link {
+          color: #000 !important;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Eagles View Kungwini",
+        "image": "https://example.com/assets/images/hero-lg-screen.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "21 Witkruis Arend St, Kungwini Country Estate",
+          "addressLocality": "Bronkhorstspruit",
+          "addressRegion": "Gauteng",
+          "postalCode": "1020",
+          "addressCountry": "ZA"
+        },
+        "priceRange": "R1200",
+        "telephone": "+27 834113931",
+        "email": "info@eaglesviewkungwini.co.za",
+        "url": "https://example.com",
+        "amenities": [
+          "Free Wifi",
+          "Free Parking",
+          "Outdoor Pool",
+          "Child-Friendly",
+          "Bar",
+          "Restaurant"
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -25.8890895,
+          "longitude": 28.7017946
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": "Gerrit Malan",
+            "datePublished": "2024-12-01",
+            "description": "Since our arrival late Friday afternoon until our departure on Sunday morning, we were met with utmost sincerity.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": "Willie Scholtz",
+            "datePublished": "2024-12-01",
+            "description": "It was a 40th birthday celebration, and the venue was perfect for the occasion.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header_area">
+      <div class="main-menu">
+        <%- include("../partials/_navbar.ejs") %>
+        <div class="hero">
+          <div class="hero-bg-color"></div>
+          <div class="text-secondary px-4 py-5 text-center hero-content">
+            <div class="py-5">
+              <h1 class="display-5">
+                Experience tranquil comfort in Bronkhorstspruit
+              </h1>
+              <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4">
+                  Discover a serene sanctuary in the heart of Bronkhorstspruit,
+                  where comfort and tranquility meet to rejuvenate your soul.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                  <a href="/contact" class="btn btn-primary btn-lg"
+                    >contact us</a
+                  >
+                  <a href="/bookings" class="btn btn-primary btn-lg"
+                    >Book Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================== facility Section start here =============== -->
+    <section class="facility-section section">
+      <div class="container px-4 py-5">
+        <h2 class="pb-2 section-title text-primary">Royal Facilities</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="facility-box">
+              <div class="facility-header" onclick="toggleDescription(this)">
+                <i class="fa fa-wifi"></i> Free Wifi
+                <span class="arrow">&#x25BC;</span>
+              </div>
+              <div class="facility-description">
+                Stay connected with complimentary high-speed internet during
+                your stay.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="facility-box">
+              <div class="facility-header" onclick="toggleDescription(this)">
+                <i class="fa fa-car"></i> Free Parking
+                <span class="arrow">&#x25BC;</span>
+              </div>
+              <div class="facility-description">
+                Secure and convenient parking available at no extra charge.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="facility-box">
+              <div class="facility-header" onclick="toggleDescription(this)">
+                <i class="fa fa-swimming-pool"></i> outdoor pool
+                <span class="arrow">&#x25BC;</span>
+              </div>
+              <div class="facility-description">
+                Take a refreshing dip in our well-maintained outdoor pool,
+                perfect for relaxation and leisure.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="facility-box">
+              <div class="facility-header" onclick="toggleDescription(this)">
+                <i class="fa fa-coffee"></i> Tea and Coffee
+                <span class="arrow">&#x25BC;</span>
+              </div>
+              <div class="facility-description">
+                Enjoy complimentary tea and coffee throughout your stay,
+                available in your room and shared spaces.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="facility-box">
+              <div class="facility-header" onclick="toggleDescription(this)">
+                <i class="fa fa-hamburger"></i> Breakfast available
+                <span class="arrow">&#x25BC;</span>
+              </div>
+              <div class="facility-description">
+                Enjoy complimentary tea and coffee throughout your stay,
+                available in your room and shared spaces.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="facility-box">
+              <div class="facility-header" onclick="toggleDescription(this)">
+                <i class="fa fa-biking"></i> Activities
+                <span class="arrow">&#x25BC;</span>
+              </div>
+              <div class="facility-description">
+                Enjoy cycling, mountain biking, and horseback riding nearby, or
+                relax with fishing and swimming on-site. Perfect for both
+                adventure and leisure.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        preserveAspectRatio="xMidYMax slice"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 2000 68"
+      >
+        <g>
+          <path
+            d="M0 24V0h2000v20h-31l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38h-57l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38h-57l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38h-58l-22 38-22-38h-57l-22 38-22-38H42L20 58l-4-6L0 24z"
+          ></path>
+          <path
+            d="M1974 48h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l3-6-3-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zm-69-20h12l6-11-6-11h-12l-7 11 7 11zm-13 13h6l4-6-4-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zm-109-20h12l7-11-7-11h-12l-6 11 6 11zm-13 13h7l3-6-3-5h-7l-3 5 3 6zm18 7h8l5-7-5-7h-8l-4 7 4 7zm-107-20h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l4-6-4-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zm-105-20h12l6-11-6-11h-12l-6 11 6 11zm-13 13h7l3-6-3-5h-7l-3 5 3 6zm18 7h8l5-7-5-7h-8l-5 7 5 7zm-105-20h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l3-6-3-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zm-106-20h12l6-11-6-11h-12l-7 11 7 11zm-13 13h7l3-6-3-5h-7l-3 5 3 6zm18 7h8l4-7-4-7h-8l-5 7 5 7zm-110-20h12l7-11-7-11h-12l-6 11 6 11zm-12 13h6l3-6-3-5h-6l-4 5 4 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zm-106-20h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l4-6-4-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zm-140-20h12l6-11-6-11h-12l-7 11 7 11zm-13 13h7l3-6-3-5h-7l-3 5 3 6zm18 7h8l4-7-4-7h-8l-5 7 5 7zm-72-20h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l4-6-4-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zM858 48h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l3-6-3-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zM758 48h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l3-6-3-5h-6l-4 5 4 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zM657 48h12l6-11-6-11h-12l-7 11 7 11zm-13 13h7l3-6-3-5h-7l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zM560 48h12l7-11-7-11h-12l-6 11 6 11zm-12 13h6l3-6-3-5h-6l-4 5 4 6zm17 7h8l5-7-5-7h-8l-4 7 4 7zM456 48h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l4-6-4-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zM353 48h12l6-11-6-11h-12l-6 11 6 11zm-13 13h7l3-6-3-5h-7l-3 5 3 6zm18 7h8l5-7-5-7h-8l-5 7 5 7zM249 48h13l6-11-6-11h-13l-6 11 6 11zm-12 13h6l3-6-3-5h-6l-3 5 3 6zm17 7h9l4-7-4-7h-9l-4 7 4 7zM150 48h12l6-11-6-11h-12l-7 11 7 11zm-13 13h7l3-6-3-5h-7l-3 5 3 6zm18 7h8l4-7-4-7h-8l-5 7 5 7zM48 48h12l6-11-6-11H48l-6 11 6 11zM35 61h7l3-6-3-5h-7l-3 5 3 6zm18 7h8l5-7-5-7h-8l-5 7 5 7zm35-21H75l-6 11 6 10h13l6-10-6-11zm12-13h-6l-4 5 4 6h6l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm107 21h-12l-7 11 7 10h12l6-10-6-11zm12-13h-6l-3 5 3 6h6l4-6-4-5zm-17-8h-8l-5 8 5 7h8l4-7-4-8zm107 21h-12l-6 11 6 10h12l7-10-7-11zm13-13h-7l-3 5 3 6h7l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm107 21h-13l-6 11 6 10h13l6-10-6-11zm12-13h-6l-3 5 3 6h6l4-6-4-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm107 21h-12l-6 11 6 10h12l6-10-6-11zm13-13h-7l-3 5 3 6h7l3-6-3-5zm-18-8h-8l-4 8 4 7h8l5-7-5-8zm108 21h-13l-6 11 6 10h13l6-10-6-11zm12-13h-6l-4 5 4 6h6l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm102 21h-12l-6 11 6 10h12l6-10-6-11zm13-13h-7l-3 5 3 6h7l3-6-3-5zm-18-8h-8l-5 8 5 7h8l5-7-5-8zm109 21h-13l-6 11 6 10h13l6-10-6-11zm12-13h-6l-4 5 4 6h6l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm103 21h-12l-7 11 7 10h12l6-10-6-11zm12-13h-6l-3 5 3 6h6l4-6-4-5zm-17-8h-8l-5 8 5 7h8l4-7-4-8zm75 21h-12l-6 11 6 10h12l6-10-6-11zm13-13h-7l-3 5 3 6h7l3-6-3-5zm-18-8h-8l-5 8 5 7h8l5-7-5-8zm139 21h-13l-6 11 6 10h13l6-10-6-11zm12-13h-6l-4 5 4 6h6l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm74 21h-13l-6 11 6 10h13l6-10-6-11zm12-13h-6l-3 5 3 6h6l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm107 21h-13l-6 11 6 10h13l6-10-6-11zm12-13h-6l-4 5 4 6h6l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm105 21h-13l-6 11 6 10h13l6-10-6-11zm12-13h-6l-3 5 3 6h6l3-6-3-5zm-17-8h-9l-4 8 4 7h9l4-7-4-8zm107 21h-13l-6 11 6 10h13l6-10-6-11zm13-13h-6l-3 5 3 6h6l3-6-3-5zm-18-8h-9l-4 8 4 7h9l4-7-4-8zm106 21h-12l-7 11 7 10h12l6-10-6-11zm13-13h-6l-3 5 3 6h6l4-6-4-5zm-18-8h-8l-5 8 5 7h8l4-7-4-8zm105 21h-12l-6 11 6 10h12l6-10-6-11zm14-13h-7l-3 5 3 6h7l3-6-3-5zm-19-8h-8l-5 8 5 7h8l5-7-5-8zm107 21h-12l-7 11 7 10h12l6-10-6-11zm13-13h-6l-3 5 3 6h6l4-6-4-5zm-18-8h-8l-5 8 5 7h8l4-7-4-8zm108 21h-13l-6 11 6 10h13l6-10-6-11zm13-13h-6l-4 5 4 6h6l3-6-3-5zm-18-8h-9l-4 8 4 7h9l4-7-4-8z"
+          ></path>
+        </g>
+      </svg>
+    </section>
+    <!-- ============= Facility Section ends here ======= -->
+    <!-- ============= Gallery Section starts here ======= -->
+    <section class="gallery-section section" id="gallery-section">
+      <div class="container px-4 py-5">
+        <h2 class="pb-2 section-title" style="color: #fff">Gallery</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+              style="
+                background-image: url('assets/images/outdoor-view.webp');
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                  Outdoor View
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+              style="background-image: url('assets/images/bedroom-1.webp')"
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Bedroom</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+              style="background-image: url('assets/images/bathroom-1.webp')"
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Bathroom</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+              style="background-image: url('assets/images/setting-room.webp')"
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">lounge</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+              style="
+                background-image: url('assets/images/kitchen.webp');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+              "
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Kitchen</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+              style="background-image: url('assets/images/braai-area.webp')"
+            >
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                  Braai Area
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============= Gallery Section ends here ======= -->
+    <!-- ============= About Section starts here ======= -->
+    <div class="about_section section">
+      <div class="container px-4">
+        <div class="row about_content">
+          <div class="col-md-6">
+            <div class="about_box">
+              <div class="about_title">
+                <h2>
+                  <span class="text_norlam">Welcome To</span>
+                  <br />Eagles View Kungwini
+                </h2>
+              </div>
+              <p class="fs-5 mb-4 text-white">
+                Located in Bronkhorstspruit, Gauteng, and just a short walk from
+                Bronkhorstspruit Dam, Eagles View Kungwini offers a tranquil
+                escape for families and couples. Our 7 comfortable units feature
+                en-suite bathrooms, a shared kitchen, lounge, patio, and access
+                to amenities like a pool, braai facilities, Wi-Fi, and secure
+                parking. Enjoy nearby activities such as bird watching, fishing,
+                cycling, and horseback riding. Whether you’re seeking relaxation
+                or adventure, Eagles View Kungwini is your perfect getaway. Let
+                us take care of your every need and make your stay truly
+                unforgettable.
+              </p>
+              <button class="btn-primary">See More</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="img_box">
+                  <figure>
+                    <img
+                      src="assets/images/about-img.webp"
+                      alt="#"
+                      height="250"
+                      width="100%"
+                    />
+                  </figure>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img_box">
+                  <figure>
+                    <img
+                      src="assets/images/lounge-1.webp"
+                      alt="#"
+                      height="200"
+                      width="100%"
+                    />
+                  </figure>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="img_box">
+                  <figure>
+                    <img
+                      src="assets/images/braai-section.webp"
+                      alt="#"
+                      height="200"
+                      width="100%"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============= About Section ends here ======= -->
+    <!-- ============= Testimonial Section start here ======= -->
+    <section class="testimonial-section">
+      <div class="container px-4">
+        <h2><span class="text_norlam">What Others</span><br />Saying</h2>
+        <div class="container">
+          <div class="swiper testimonial-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonial-item">
+                <p>
+                  " Since Our arrival late Friday afternoon until our Departure
+                  on Sunday Morning We have been met with the utmost sincerety
+                  and the service we Receive from all staff"
+                </p>
+                <h4>— Gerrit Malan</h4>
+              </div>
+              <div class="swiper-slide testimonial-item">
+                <p>
+                  "It was a 40th birthday celebration and the venue was perfect
+                  for the occasion. Highly recomendable."
+                </p>
+                <h4>— Willie Scholtz</h4>
+              </div>
+              <div class="swiper-slide testimonial-item">
+                <p>
+                  "We enjoyed our stay at eagless View. Jared and Precious were
+                  very helpful and accommodating! We felt very welcome and taken
+                  care of."
+                </p>
+                <h4>— Taren Govender</h4>
+              </div>
+              <div class="swiper-slide testimonial-item">
+                <p>"Newly remodeled book in advanced"</p>
+                <h4>— Fraser Vermaak</h4>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============= TestimonialSection ends here ======= -->
+    <%- include("../partials/_footer.ejs") %>
+  </body>
+</html>
